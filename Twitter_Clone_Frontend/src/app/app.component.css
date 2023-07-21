@@ -1,0 +1,26 @@
+#logout{
+    cursor: pointer;
+}
+
+.navbar-nav{
+    position: fixed;
+    right: 40px;
+}
+
+.navbar-brand{
+    margin-left: 10px;
+}
+
+.navbar-nav{
+    color: white;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-item:hover{
+    text-decoration: underline white;
+    font-weight: bolder;
+}
+

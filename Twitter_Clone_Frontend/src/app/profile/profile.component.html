@@ -1,0 +1,33 @@
+<div class="flexContainer">
+    <div class="container">
+        <div class = 'avatar'>
+            <img src="../../assets/avatar.png" alt="Profile Avatar">
+        </div>
+        <div class='profile username'>
+            @{{user.username}}
+        </div>
+
+        <div class="follow">
+            <div class = "followers">{{user.followers.length}}</div>
+            <div class = "following">{{user.following.length}}</div>
+        </div>
+
+        <div class = "tweets">
+            Tweets
+        </div>
+        
+        <div class = "showTweets" *ngFor="let tweet of tweets">
+            <div class="card mt-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{tweet.username}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">@{{tweet.username}}</h6>
+                  <p class="card-text">{{tweet.tweetdata}}</p>
+                  <button class="btn btn-primary card-link" >Like</button>
+                  <button class="btn btn-primary card-link" *ngIf="!sameUser(tweet.username)">Follow</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</div>

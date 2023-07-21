@@ -1,0 +1,32 @@
+.follow{
+    display: flex;
+}
+.followers, .following{
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    width: 400px;
+}
+
+.tweetUsername, .tweetData, .tweetLikes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 550px;
+}
+
+.stylingTweets{
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.flexContainer{
+    overflow-y: auto;
+}
+

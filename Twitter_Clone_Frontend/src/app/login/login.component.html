@@ -1,0 +1,66 @@
+
+    <div class="flexContainer">
+      <div class="container w-50">
+        <div class = "intro">
+            Login !
+        </div>
+        <form #f = "ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input 
+                type="text" 
+                required
+                class="form-control mt-2" 
+                id="username" 
+                aria-describedby="emailHelp" 
+                placeholder="Enter the Username"
+                name="username"
+                ngModel
+                #username = "ngModel"
+                >
+              </div>
+
+              <span class="text-danger" *ngIf="username.errors">Username is required</span>
+              <span class="text-danger" *ngIf="f.form.value.username.length > 15">maximum length of username is 15</span>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input 
+                type="email" 
+                required
+                class="form-control mt-2" 
+                id="email" 
+                aria-describedby="emailHelp" 
+                placeholder="Enter your Email"
+                name="email"
+                ngModel
+                #email = "ngModel"
+                >
+              </div>
+
+              <span class="text-danger" *ngIf="email.errors">Email is required</span>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input 
+                  type="password" 
+                  class="form-control mt-2" 
+                  id="password" 
+                  placeholder="Enter your Password"
+                  name="password"
+                  required
+                  ngModel
+                  #password = "ngModel"
+                  >
+                </div>
+
+             <span class="text-danger" *ngIf="password.errors">Password is required</span>
+
+             <div>
+                <button class = 'btn btn-primary' routerLink="/login" [disabled]="f.invalid || f.form.value.username.length > 15">Login</button>
+                <button class = 'btn btn-success' routerLink="/signup">Signup</button>
+            </div>
+        </form>
+        
+    </div>
+    </div>

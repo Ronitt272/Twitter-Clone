@@ -1,0 +1,26 @@
+<div class="myContainer">
+    <div class="card" style="width: 18rem;">
+         <img class="card-img-top" src="../../assets/avatar.png" alt="Profile Avatar"> 
+
+         <div class="card-body">
+         <h5 class="card-title text-center">Anonymous User</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-header">
+          Home
+        </div>
+        <div class="card-body tweetsection">
+          <h5 class="card-title">What's on your mind ?</h5>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <input type="text" name="tweetdata" id="tweetdata" [(ngModel)] = "tweetData">
+          <a class="btn btn-primary tweetbutton" (click)="onTweet()">Tweet</a>
+        </div>
+        <div class="card-footer text-muted">
+          Have fun tweeting !
+        </div>
+      </div>
+
+</div>
